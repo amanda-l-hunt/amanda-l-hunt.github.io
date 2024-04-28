@@ -58,6 +58,9 @@ html {
         padding-right: 2.275%;
         overflow: auto;
       }
+      img {
+        border-radius: 50%;
+      }
 
       .container {
         display: grid;
