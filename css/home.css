@@ -64,6 +64,13 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 /* Portfolio Section Photos */
 .container {  
@@ -97,9 +104,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-img {
-  border-radius: 50%;
 }
 
 /* Footer */
