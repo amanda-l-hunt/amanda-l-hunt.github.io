@@ -1,51 +1,203 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Graphic Design | Amanda Hunt</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta property="og:url" content="http://www.amandahunt.xyz/portfolio/graphic_design.html" />
-    <meta property="og:site_name" content="Amanda Hunt" />
-    <meta property="og:type" content="website" />
-    <meta name="author" content="Amanda Hunt" />
-    <meta name="description" content="Amanda Hunt's Portfolio: Graphic Design and other projects" />
-    <meta name="keywords" content="Graphic Designer, Photographer" />
-    <link href="../../css/graphic_design.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <header>
-      <nav><a class="logo">
-          <h1>Amanda Hunt</h1>
-        </a>
-        <div class="headernav"><a class="headernav" href="../about.html">About</a><a class="headernav" href="../portfolio.html">Portfolio</a><a class="headernav" href="../../index.html">Home</a></div>
-      </nav>
-    </header><br>
-    <hr>
-    <!-- Photo Grid -->
-    <div class="row">
-      <div class="column">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
+
+<head>
+  <title>Graphic Design | Amanda Hunt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta property="og:url" content="http://www.amandahunt.xyz/portfolio/graphic_design.html" />
+  <meta property="og:site_name" content="Amanda Hunt" />
+  <meta property="og:type" content="website" />
+  <meta name="author" content="Amanda Hunt" />
+  <meta name="description" content="Amanda Hunt's Portfolio: Graphic Design and other projects" />
+  <meta name="keywords" content="Graphic Designer, Photographer" />
+  <link href="../../css/graphic_design.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+    <nav><a class="logo">
+        <h1>Amanda Hunt</h1>
+      </a>
+      <div class="headernav"><a class="headernav" href="../about.html">About</a><a class="headernav"
+          href="../portfolio.html">Portfolio</a><a class="headernav" href="../../index.html">Home</a></div>
+    </nav>
+  </header><br>
+  <hr>
+  <section class="gallery">
+    <div class="container">
+      <div class="row">
+        <div class="gallery-filter">
+          <span class="filter-item active" data-filter="all">all</span>
+          <span class="filter-item" data-filter="PackageDesigns">Package Designs</span>
+          <span class="filter-item" data-filter="Illustrations">Illustrations</span>
+          <span class="filter-item" data-filter="LogoDesigns">Logo Designs</span>
+          <span class="filter-item" data-filter="Prints">Prints</span>
+        </div>
       </div>
-      <div class="column">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
-      </div>
-      <div class="column">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
-      </div>
-      <div class="column">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
-        <img src="../../img/placeholder.JPG" style="width:100%" alt="photo">
+      <div class="row">
+        <!-- gallery item start -->
+        <div class="gallery-item Prints">
+          <div class="gallery-item-inner">
+            <img src="../../img/positive cta.png" alt="Positive Call to Action Poster">
+          </div>
+        </div>
+        <!-- gallery item end -->
+        <!-- gallery item start -->
+        <div class="gallery-item Illustrations">
+          <div class="gallery-item-inner">
+            <img src="../../img/app icons.png" alt="App Icons">
+          </div>
+        </div>
+        <!-- gallery item end -->
+        <!-- gallery item start -->
+        <div class="gallery-item LogoDesigns">
+          <div class="gallery-item-inner">
+            <img src="../../img/Game-Company-Logo-WEB-TRNS.gif" alt="Game Company Logo">
+          </div>
+        </div>
+        <!-- gallery item end -->
+        <!-- gallery item start -->
+        <div class="gallery-item Illustrations">
+          <div class="gallery-item-inner">
+            <img src="../../img/clip art.png" alt="Clip Art">
+          </div>
+        </div>
+        <!-- gallery item end -->
+        <!-- gallery item start -->
+        <div class="gallery-item PackageDesigns">
+          <div class="gallery-item-inner">
+            <!--candle slideshow start-->
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <img src="../../img/blocks candle logo.png" alt="Blocks Candle Company Logo">
+              </div>
+              <div class="mySlides fade">
+                <img src="../../img/cube WB.png" alt="Basic Collection Cube">
+              </div>
+              <div class="mySlides fade">
+                <img src="../../img/pyramid WB.png" alt="Basic Collection Pyramid">
+              </div>
+              <div class="mySlides fade">
+                <img src="../../img/sphere WB.png" alt="Basic Collection Sphere">
+              </div>
+              <div class="mySlides fade">
+                <img src="../../img/hex WB.png" alt="Basic Collection Hexagon">
+              </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span> 
+              <span class="dot" onclick="currentSlide(5)"></span>  
+            </div>
+            
+            <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+            <!--candle slideshow end-->
+          </div>
+        </div>
+        <!-- gallery item end -->
+
+        <!--gallery item start-->
+        <div class="gallery-item Prints">
+          <div class="gallery-item-inner">
+            <img src="../../img/MagazinePNG.png" alt="Game On Magazine">
+          </div>
+        </div>
+        <!--gallery item end-->
+
+        <!-- gallery item start-->
+        <div class="gallery-item Prints">
+          <div class="gallery-item-inner">
+            <img
+              src="../../img/Icecream-Poster-WEB.gif"
+              alt="Ice Cream Poster">
+          </div>
+        </div>
+        <!--gallery item end-->
+
+        <div class="gallery-item Packaging">
+          <div class="gallery-item-inner">
+            <img
+              src="../../img/placeholder.JPG"
+              alt="Packaging">
+          </div>
+        </div>
+
+        <!-- gallery item start -->
+        <div class="gallery-item Packaging">
+          <div class="gallery-item-inner">
+            <img
+              src="../../img/placeholder.JPG"
+              alt="Packaging">
+          </div>
+        </div>
+        <!-- gallery item end -->
       </div>
     </div>
-    <footer>
-      <hr>
-      <a class="footerright">2022&copy; by Amanda Hunt </a>
-      <a class="footernav" href="../about.html">About</a>
-      <a class="footernav" href="../portfolio.html">Portfolio</a>
-      <a class="footernav" href="../../index.html">Home</a>
-    </footer>
-  </body>
+  </section>
+  <script>
+    const filterContainer = document.querySelector(".gallery-filter"),
+      galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterContainer.addEventListener("click", (event) => {
+      if (event.target.classList.contains("filter-item")) {
+        // deactivate existing active 'filter-item'
+        filterContainer.querySelector(".active").classList.remove("active");
+        // activate new 'filter-item'
+        event.target.classList.add("active");
+        const filterValue = event.target.getAttribute("data-filter");
+        galleryItems.forEach((item) => {
+          if (item.classList.contains(filterValue) || filterValue === 'all') {
+            item.classList.remove("hide");
+            item.classList.add("show");
+          }
+          else {
+            item.classList.remove("show");
+            item.classList.add("hide");
+          }
+        });
+      }
+    });
+  </script>
+  <footer>
+    <hr>
+    <a class="footerright">2022-2024&copy; by Amanda Hunt </a>
+    <a class="footernav" href="../about.html">About</a>
+    <a class="footernav" href="../portfolio.html">Portfolio</a>
+    <a class="footernav" href="../../index.html">Home</a>
+  </footer>
+</body>
+
 </html>

@@ -1,159 +1,299 @@
 @charset "utf-8";
 /* CSS Document */
 html {
-        background: #D6DCE5;
-      }
+  background: #d6dce5;
+}
 
-      * {
-        box-sizing: border-box;
-      }
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 
-      /*Header*/
-      nav {
-        width: 100%;
-        height: 80px;
-        background-color: #D6DCE5;
-        padding: 0px;
-        margin: 0px;
-        text-decoration: none;
-      }
+/*Header*/
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #d6dce5;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
 
-      nav .headernav a {
-        margin-right: 3%;
-        text-decoration: none;
-        color: #44546A;
-        font-family: "Avenir LT 35 Light", sans-serif;
-        font-size: 14px;
-        line-height: 18px;
-        font-weight: 700;
-        margin-top: 3%;
-        float: right;
-        text-align: center;
-      }
+nav .headernav a {
+  margin-right: 3%;
+  text-decoration: none;
+  color: #44546a;
+  font-family: "Avenir LT 35 Light", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-top: 3%;
+  float: right;
+  text-align: center;
+}
 
-      nav .headernav a:hover {
-        color: #FFAAAA;
-      }
+nav .headernav a:hover {
+  color: #ffaaaa;
+}
 
-      /*Logo*/
-      .logo {
-        float: left;
-        position: absolute;
-        width: 400px;
-        height: 60px;
-        padding: 15px 15px;
-      }
+/*Logo*/
+.logo {
+  float: left;
+  position: absolute;
+  width: 400px;
+  height: 60px;
+  padding: 15px 15px;
+}
 
-      .logo h1 {
-        font-size: 40px;
-        font-family: "Avenir LT 35 Light", sans-serif;
-        text-shadow: -6px -3px 5px #ACC7C8, 6px 4px 5px #FFCCCC;
-        color: #E7E6E6;
-        margin-left: 30px;
-      }
+.logo h1 {
+  font-size: 40px;
+  font-family: "Avenir LT 35 Light", sans-serif;
+  text-shadow: -6px -3px 5px #acc7c8, 6px 4px 5px #ffcccc;
+  color: #e7e6e6;
+  margin-left: 30px;
+}
 
-      /*Content*/
-      body {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: auto;
-        width: 90%;
-        padding-left: 2.275%;
-        padding-right: 2.275%;
-        overflow: auto;
-      }
+/*Content*/
+body {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  width: 90%;
+  padding-left: 2.275%;
+  padding-right: 2.275%;
+  overflow: auto;
+  line-height: 1.5;
+  font-family: "Avenir LT 35 Light", sans-serif;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+/*.gallery*/
+.gallery {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+.gallery .gallery-filter {
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.gallery .gallery-filter .filter-item {
+  color: #ffffff;
+  font-size: 17px;
+  border: 2px solid white;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+.gallery .gallery-filter .filter-item.active {
+  color: white;
+  border-color: #44546a;
+  background: #44546a;
+}
+.gallery .gallery-item {
+  width: calc(100% / 3);
+  padding: 15px;
+}
+.gallery .gallery-item-inner img {
+  width: auto;
+}
+.gallery .gallery-item.show {
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gallery .gallery-item.hide {
+  display: none;
+}
 
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+/* Slideshow container */
+.mySlides {
+  display: none;
+}
+.slideshow-container {
+  max-width: auto;
+  position: relative;
+  margin: auto;
+}
 
-      /* Footer */
-      footer .footerright {
-        font-family: "Avenir LT 35 Light", sans-serif;
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba(104, 103, 103, 1.00);
-        font-weight: 700;
-        margin-top: 3%;
-        margin-bottom: 3%
-      }
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-      footer .footerright span {
-        color: rgba(181, 178, 178, 1.00);
-        font-weight: 400;
-        margin-top: 3%;
-      }
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-      footer .footernav {
-        font-family: "Avenir LT 35 Light", sans-serif;
-        font-size: 14px;
-        line-height: 18px;
-        color: rgba(104, 103, 103, 1.00);
-        font-weight: 700;
-        text-decoration: none;
-        margin-top: 3%;
-      }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-      footer .footernav span {
-        color: rgba(181, 178, 178, 1.00);
-        font-weight: 400;
-        text-decoration: none;
-        margin-top: 3%;
-      }
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-      footer .footerright {
-        float: left;
-        margin-left: 3%;
-        font-family: "Avenir LT 35 Light", sans-serif;
-        margin-top: 3%;
-      }
+.active,
+.dot:hover {
+  background-color: #717171;
+}
 
-      footer .footernav {
-        float: right;
-        margin-right: 3%;
-        margin-top: 3%;
-        font-family: "Avenir LT 35 Light", sans-serif;
-        text-decoration: none;
-      }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-      footer .footernav:hover {
-        color: #FFAAAA;
-      }
+/*responsive*/
+@media (max-width: 491px) {
+  .gallery .gallery-item {
+    width: 50%;
+  }
+}
+@media (max-width: 467px) {
+  .gallery .gallery-item {
+    width: 100%;
+  }
+  .gallery .gallery-filter .filter-item {
+    margin-bottom: 10px;
+  }
+}
 
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0 4px;
-      }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-      /* Create four equal columns that sits next to each other */
-      .column {
-        flex: 25%;
-        max-width: 25%;
-        padding: 0 4px;
-      }
+/* Footer */
+footer .footerright {
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+    "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  font-size: 14px;
+  line-height: 18px;
+  color: #44546a;
+  font-weight: 700;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
 
-      .column img {
-        margin-top: 8px;
-        vertical-align: middle;
-        width: 100%;
-      }
+footer .footerright span {
+  color: #44546a;
+  font-weight: 400;
+  margin-top: 3%;
+}
 
-      a:link {
-        text-decoration: none;
-      }
+footer .footernav {
+  font-family: "Avenir LT 35 Light", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #44546a;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 3%;
+}
 
-      a:visited {
-        text-decoration: none;
-      }
+footer .footernav span {
+  color: #44546a;
+  font-weight: 400;
+  text-decoration: none;
+  margin-top: 3%;
+}
 
-      a:hover {
-        text-decoration: none;
-      }
+footer .footerright {
+  float: left;
+  margin-left: 3%;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+    "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  margin-top: 3%;
+}
 
-      a:active {
-        text-decoration: none;
-      }
+footer .footernav {
+  float: right;
+  margin-right: 3%;
+  margin-top: 3%;
+  font-family: "Avenir LT 35 Light", sans-serif;
+  text-decoration: none;
+}
+
+footer .footernav:hover {
+  color: #ffaaaa;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
