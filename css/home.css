@@ -46,6 +46,7 @@ nav .headernav a:hover {
   text-shadow: -6px -3px 5px #ACC7C8, 6px 4px 5px #FFCCCC;
   color: #E7E6E6;
   margin-left: 30px;
+  text-decoration: none;
 }
 
 /* Content */
