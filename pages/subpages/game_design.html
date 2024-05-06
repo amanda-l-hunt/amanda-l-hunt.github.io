@@ -11,11 +11,11 @@
   <meta name="author" content="Amanda Hunt" />
   <meta name="description" content="Amanda Hunt's Portfolio: Graphic Design and other projects" />
   <meta name="keywords" content="Graphic Designer, Photographer" />
-<script src="https://kit.fontawesome.com/1937eece5f.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1937eece5f.js" crossorigin="anonymous"></script>
 
   <style>
     html {
-      background: radial-gradient(circle, rgba(255, 170, 170, 1) 18%, rgba(231, 230, 230, 1) 64%, rgba(172, 199, 200, 1) 83%);
+      background: #d6dce5;
     }
 
     /*Header*/
@@ -59,8 +59,14 @@
       text-shadow: -6px -3px 5px #ACC7C8, 6px 4px 5px #FFCCCC;
       color: #E7E6E6;
       margin-left: 30px;
+      text-decoration: none;
     }
-
+    .logo a{
+      text-decoration: none;
+    }
+    h1 a {
+      text-decoration: none;
+    }
     /*Content*/
     body {
       margin-left: auto;
@@ -97,13 +103,14 @@
 
     /* Add a card effect for articles */
     .card {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-      margin-top: 20px;
-      transform: translate(-80px);
-      text-align: center;
+      display: flex;
+      /* Use flexbox */
+      flex-direction: column;
+      /* Stack items vertically */
+      align-items: center;
+      /* Center items horizontally */
+      justify-content: center;
+      /* Center items vertically */
     }
 
     /* Clear floats after the columns */
@@ -168,7 +175,7 @@
   </style>
 </head>
 
-<body>
+<div>
   <header>
     <a href="https://amanda-l-hunt.github.io/index.html" class="logo">
       <h1>Amanda Hunt</h1>
@@ -186,23 +193,20 @@
   <div class="row"></div>
   <div class="leftcolumn">
     <div class="card">
-      <h2>GAME DESIGN</h2>
-      <h3>COMING SOON!</h3>
+      <h2>GAME DESIGN AND ANIMATION</h2>
+      <img src="../../img/animated start ver 1.gif" alt="animation ver 1"
+        style="width: 890px; height: auto; padding: 20px auto;" loop>
+      <p>Gravity Games Logo Animation</p>
+      <p>To check out more of my designs, see the rest of <a href="../portfolio.html">my portfolio!</a></p>
     </div>
-    <div class="row"></div>
   </div>
-  <img src="../../img/tinyplant.jpg" width="1620" height="2000" alt="plant" />
-  <div class="rightcolumn">
-    <div class="card"></div>
-    <div class="row"></div>
-  </div>
-  <footer>
-    <hr>
-    <a class="footerright">2022&copy; by Amanda Hunt </a>
-    <a class="footernav" href="../about.html">About</a>
-    <a class="footernav" href="../portfolio.html">Portfolio</a>
-    <a class="footernav" href="../../index.html">Home</a>
-  </footer>
+<footer>
+  <hr>
+  <a class="footerright">2022-2024&copy; by Amanda Hunt </a>
+  <a class="footernav" href="../about.html">About</a>
+  <a class="footernav" href="../portfolio.html">Portfolio</a>
+  <a class="footernav" href="../../index.html">Home</a>
+</footer>
 </body>
 
 </html>

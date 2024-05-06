@@ -56,6 +56,9 @@ nav .headernav a:hover {
   margin-left: 30px;
   text-decoration: none !important;
 }
+h1 a{
+  text-decoration: none;
+}
 
 /*Content*/
 body {
@@ -219,7 +222,7 @@ img {
 
 /* Footer */
 footer .footerright {
-  font-family: font-family: "Avenir LT 35 Light", sans-serif;
+  font-family: "Avenir LT 35 Light", sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #44546a;
@@ -254,7 +257,7 @@ footer .footernav span {
 footer .footerright {
   float: left;
   margin-left: 3%;
-  font-family: font-family: "Avenir LT 35 Light", sans-serif;
+  font-family: "Avenir LT 35 Light", sans-serif;
   margin-top: 3%;
 }
 

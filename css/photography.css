@@ -55,6 +55,9 @@ nav .headernav a:hover {
   margin-left: 30px;
   text-decoration: none !important;
 }
+h1 a{
+  text-decoration: none;
+}
 
 /*Content*/
 body {
