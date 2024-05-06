@@ -55,7 +55,7 @@ nav .headernav a:hover {
   margin-left: 30px;
   text-decoration: none !important;
 }
-h1 a{
+h1 a {
   text-decoration: none;
 }
 
@@ -69,7 +69,14 @@ body {
   padding-right: 2.275%;
   overflow: auto;
 }
-
+h2 {
+  font-family: "Avenir LT 35 Light", sans-serif;
+  color: #44546a;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
